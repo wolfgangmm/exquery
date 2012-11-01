@@ -122,7 +122,7 @@ public abstract class AbstractRestAnnotation extends AbstractAnnotation<RestAnno
                 
                 if(fnArgument.getName().equals(fnArgumentName)) {
                     
-                    if(fnArgument.getCardinality().hasRequiredCardinality(Cardinality.ONE)) {
+                    if(!fnArgument.getCardinality().hasRequiredCardinality(Cardinality.ONE)) {
                         throw new RestAnnotationException(RestXqErrorCodes.RQST0005);
                     }
                     
